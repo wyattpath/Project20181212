@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float turnInputValue;
 
     public float maxSpeed = 7;
-    public float jumpForce = 7;
+    public float jumpForce = 15;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -23,15 +23,8 @@ public class PlayerMovement : MonoBehaviour
     // Jumping variables
     private bool isGrounded;
     public Transform groundCheck;
-    public float checkRadius;
+    public float checkRadius = 0.25f;
     public LayerMask whatIsGround;
-
-    private void Start()
-    {
-        jumpAxisName = "Jump" + playerNumber;
-        xMovementAxisName = "Horizontal" + playerNumber;
-    }
-
 
     // Use this for initialization
     void Awake()
@@ -40,8 +33,11 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-
-
+    private void Start()
+    {
+        jumpAxisName = "Jump" + playerNumber;
+        xMovementAxisName = "Horizontal" + playerNumber;
+    }
 
     void FixedUpdate()
     {
@@ -71,10 +67,6 @@ public class PlayerMovement : MonoBehaviour
         if (move.x > 0.01f)
         {
                 transform.localScale = new Vector3(1,1,1);
-
-            
-
-
         }
         else if (move.x < -0.01f)
         {
