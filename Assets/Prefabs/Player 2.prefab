@@ -230,14 +230,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b8f650e6eece648a1fdf018a85b268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 1
+  playerNumber: 2
   maxSpeed: 7
-  jumpForce: 7
-  groundCheck: {fileID: 0}
-  checkRadius: 0
+  jumpForce: 15
+  groundCheck: {fileID: 6255924607430585166}
+  checkRadius: 0.25
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!114 &6255924606821560623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +251,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
+  attackTrigger: {fileID: 6255924606531295416}
+  attackCooldown: 0.3
 --- !u!114 &6255924606821560622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
+  hurtCooldown: 0.3
+  hurting: 0
 --- !u!1 &6255924607430585169
 GameObject:
   m_ObjectHideFlags: 0
