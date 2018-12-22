@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a490151f4b0b7f44f837b60c5bc17a3f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cameraControl2D: {instanceID: 0}
+  - playerPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
