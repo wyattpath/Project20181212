@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 70487793385531350}
   - component: {fileID: 95034774975445416}
   - component: {fileID: 114361869909888564}
-  - component: {fileID: 114634880237959820}
-  - component: {fileID: 114947107807134462}
+  - component: {fileID: 5376351447974083621}
+  - component: {fileID: 584418431328774785}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,13 +157,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   maxSpeed: 7
-  jumpForce: 15
-  groundCheck: {fileID: 4685287913950562}
-  checkRadius: 0.25
+  jumpForce: 7
+  groundCheck: {fileID: 0}
+  checkRadius: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
---- !u!114 &114634880237959820
+    m_Bits: 0
+--- !u!114 &5376351447974083621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,11 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  attackDamage: 20
-  attackCooldown: 0.5
-  hitBoxTimer: 0.25
-  hitBox: {fileID: 61058424206578718}
---- !u!114 &114947107807134462
+--- !u!114 &584418431328774785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237984d7cf20ec74d91dc70a361cb3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  startingHealth: 100
   currentHealth: 0
 --- !u!1 &1532445985312860
 GameObject:
