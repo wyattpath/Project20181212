@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: a490151f4b0b7f44f837b60c5bc17a3f
+guid: 2116dcc7af585e447bdd74f7f34c2686
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - cameraControl2D: {instanceID: 0}
-  - playerPrefab: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

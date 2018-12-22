@@ -10444,7 +10444,7 @@ PrefabInstance:
     - target: {fileID: 8258043086181304685, guid: a7d7a5b433a48d24eb38c02bc9ad5ec2,
         type: 3}
       propertyPath: orthographic size
-      value: 8.557853
+      value: 8.558633
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d7a5b433a48d24eb38c02bc9ad5ec2, type: 3}
@@ -10491,21 +10491,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1918799550}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4685287913950562 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4685287913950562, guid: 29eaab0101f98a34c9c61d12dee16797,
-    type: 3}
-  m_PrefabInstance: {fileID: 3201874644254130407}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4798341575812682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4798341575812682, guid: 29eaab0101f98a34c9c61d12dee16797,
-    type: 3}
-  m_PrefabInstance: {fileID: 3201874644254130407}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &61058424206578718 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 61058424206578718, guid: 29eaab0101f98a34c9c61d12dee16797,
     type: 3}
   m_PrefabInstance: {fileID: 3201874644254130407}
   m_PrefabAsset: {fileID: 0}
@@ -10564,44 +10552,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114361869909888564, guid: 29eaab0101f98a34c9c61d12dee16797,
-        type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 4685287913950562}
-    - target: {fileID: 114361869909888564, guid: 29eaab0101f98a34c9c61d12dee16797,
-        type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 114361869909888564, guid: 29eaab0101f98a34c9c61d12dee16797,
-        type: 3}
-      propertyPath: checkRadius
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114361869909888564, guid: 29eaab0101f98a34c9c61d12dee16797,
-        type: 3}
-      propertyPath: jumpForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5376351447974083621, guid: 29eaab0101f98a34c9c61d12dee16797,
-        type: 3}
-      propertyPath: attackTrigger
-      value: 
-      objectReference: {fileID: 61058424206578718}
-    - target: {fileID: 584418431328774785, guid: 29eaab0101f98a34c9c61d12dee16797,
-        type: 3}
-      propertyPath: hurtCooldown
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}
---- !u!61 &6255924606531295416 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6255924606531295416, guid: 9264b7957b44b684c99884c40c538938,
-    type: 3}
-  m_PrefabInstance: {fileID: 6255924607281716350}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6255924607281716350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10669,41 +10621,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6255924606821560620, guid: 9264b7957b44b684c99884c40c538938,
-        type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 6255924607430585166}
-    - target: {fileID: 6255924606821560620, guid: 9264b7957b44b684c99884c40c538938,
-        type: 3}
-      propertyPath: playerNumber
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255924606821560620, guid: 9264b7957b44b684c99884c40c538938,
-        type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255924606821560620, guid: 9264b7957b44b684c99884c40c538938,
-        type: 3}
-      propertyPath: checkRadius
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255924606821560620, guid: 9264b7957b44b684c99884c40c538938,
-        type: 3}
-      propertyPath: jumpForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255924606821560623, guid: 9264b7957b44b684c99884c40c538938,
-        type: 3}
-      propertyPath: attackTrigger
-      value: 
-      objectReference: {fileID: 6255924606531295416}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9264b7957b44b684c99884c40c538938, type: 3}
---- !u!4 &6255924607430585166 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6255924607430585166, guid: 9264b7957b44b684c99884c40c538938,
-    type: 3}
-  m_PrefabInstance: {fileID: 6255924607281716350}
-  m_PrefabAsset: {fileID: 0}

@@ -157,12 +157,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   maxSpeed: 7
-  jumpForce: 7
-  groundCheck: {fileID: 0}
-  checkRadius: 0
+  jumpForce: 15
+  groundCheck: {fileID: 4685287913950562}
+  checkRadius: 0.25
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!114 &5376351447974083621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
+  attackTrigger: {fileID: 61058424206578718}
+  attackCooldown: 0.3
 --- !u!114 &584418431328774785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
+  hurtCooldown: 2
+  hurting: 0
 --- !u!1 &1532445985312860
 GameObject:
   m_ObjectHideFlags: 0

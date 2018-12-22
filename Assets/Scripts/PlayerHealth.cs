@@ -11,12 +11,16 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector] public bool hurting;
 
     private Animator animator;
+    private Rigidbody2D rb2d;
+    private Collider2D c2d;
     private bool dead;
     private float hurtTimer;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
+        c2d = GetComponent<CapsuleCollider2D>();
     }
     private void OnEnable()
     {
@@ -46,6 +50,9 @@ public class PlayerHealth : MonoBehaviour
     {
         dead = true;
         animator.SetTrigger("die");
+        rb2d.isKinematic = true;
+        c2d.isTrigger = true;
+
     }
     private void Update()
     {

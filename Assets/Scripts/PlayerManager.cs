@@ -16,8 +16,6 @@ public class PlayerManager : MonoBehaviour
     {
         movement = instance.GetComponent<PlayerMovement>();
         attacking = instance.GetComponent<PlayerAttack>();
- 
-
         movement.playerNumber = playerNumber;
         attacking.playerNumber = playerNumber;
     }
