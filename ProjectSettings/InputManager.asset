@@ -90,7 +90,7 @@ InputManager:
     descriptiveName: Shooting for Player 2
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 5
+    positiveButton: '[5]'
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000

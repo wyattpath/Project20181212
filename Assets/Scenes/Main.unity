@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 498846631}
   m_Layer: 8
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10552,10 +10552,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 212615901899001214, guid: 29eaab0101f98a34c9c61d12dee16797,
+    - target: {fileID: 114057592281330086, guid: 29eaab0101f98a34c9c61d12dee16797,
         type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 0
+      propertyPath: whatIsPlayer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}

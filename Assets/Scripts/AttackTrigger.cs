@@ -9,8 +9,6 @@ public class AttackTrigger : MonoBehaviour
     public LayerMask whatIsPlayer;
     public float size = 0f;
 
-
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.isTrigger && other.CompareTag("Player"))

@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private Vector2 move;
+    private bool facingRight = true;
 
     // Jumping variables
     private bool isGrounded;
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-		//Jumping
+        //Jumping
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         if (Input.GetButtonDown(jumpAxisName) && isGrounded)
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
-		// Moving along the x-Axis
+        // Moving along the x-Axis
         move = Vector2.zero;
         move.x = movementInputValue;
         rb.velocity = new Vector2(move.x * maxSpeed, rb.velocity.y);
@@ -63,19 +64,28 @@ public class PlayerMovement : MonoBehaviour
     {
         movementInputValue = Input.GetAxis(xMovementAxisName);
 
-        // flips Sprite
-        if (move.x > 0.01f)
+        // facing right
+        if (move.x > 0.01f && !facingRight)
         {
-                transform.localScale = new Vector3(1,1,1);
+            //transform.localScale = new Vector3(1,1,1);
+            Flip();
         }
-        else if (move.x < -0.01f)
+        // facing left
+        else if (move.x < -0.01f && facingRight)
         {
-                transform.localScale = new Vector3(-1,1,1);
-            
+            //transform.localScale = new Vector3(-1,1,1);
+            Flip();
         }
 
         // Animates walking
         animator.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
         animator.SetBool("grounded", isGrounded);
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+
+        transform.Rotate(0f, 180f, 0f);
     }
 }
