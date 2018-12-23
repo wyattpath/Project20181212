@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 212615901899001214}
   - component: {fileID: 50412925046019360}
   - component: {fileID: 70487793385531350}
+  - component: {fileID: 5441840937953811267}
   - component: {fileID: 95034774975445416}
   - component: {fileID: 114361869909888564}
   - component: {fileID: 5376351447974083621}
@@ -153,9 +154,25 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: -0.61}
-  m_Size: {x: 0.6, y: 1.23}
+  m_Offset: {x: 0.06, y: -0.85}
+  m_Size: {x: 0.5, y: 0.75}
   m_Direction: 0
+--- !u!58 &5441840937953811267
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296772891141886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06, y: -0.5}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!95 &95034774975445416
 Animator:
   serializedVersion: 3
@@ -345,5 +362,5 @@ MonoBehaviour:
   attackDamage: 20
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   size: 0
