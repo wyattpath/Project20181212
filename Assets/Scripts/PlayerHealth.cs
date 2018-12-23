@@ -52,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
         animator.SetTrigger("die");
         rb2d.isKinematic = true;
         c2d.isTrigger = true;
+        Destroy(gameObject, 1f);
 
     }
     private void Update()
