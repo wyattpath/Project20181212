@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public int playerNumber = 1;
     public Collider2D attackTrigger;
     public float attackCooldown = 0.3f;
+    public float attackTriggerTimer = 0.1f;
 
     private string playerAttackName;
     private bool attacking = false;
@@ -36,7 +37,6 @@ public class PlayerAttack : MonoBehaviour
             attacking = true;
             animator.SetTrigger("attack");
             attackTimer = attackCooldown;
-            attackTrigger.enabled = true;
         }
 
         if (attacking)
@@ -44,6 +44,9 @@ public class PlayerAttack : MonoBehaviour
             if (attackTimer > 0)
             {
                 attackTimer -= Time.deltaTime;
+                if (attackTimer < attackTriggerTimer)
+                    attackTrigger.enabled = true;
+
             }
             else
             {
