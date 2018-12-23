@@ -8,7 +8,7 @@ public class Fireball : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D rb2d;
     public GameObject impactEffect;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class Fireball : MonoBehaviour
             }
 
             impactEffect = Instantiate(impactEffect, transform.position, transform.rotation);
-            Destroy(impactEffect, 1f);
+            Destroy(impactEffect, .5f);
             Destroy(gameObject);
         }
     }
