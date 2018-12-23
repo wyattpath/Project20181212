@@ -10,14 +10,18 @@ AnimatorOverrideController:
   m_Controller: {fileID: 9100000, guid: eca3ed233d57b0d48a22d189e687db2f, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: db98f4b2ebec1834abc79bc1358b9226, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 9f9298fd84aa07f49b0cdea365c2af16, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2aaf441f299e52441a804d04acc0b187, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: cfa762c57eaef5a458bf1155d178a020, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1179ea5ab695e1c42bfae65e0a8437dd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: da98bed0ff8fd5a4089ea2bd6fb8724a, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: ac295c8c44ae1ba4e9cd8c5c576eed25, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 72451b7dccb18ed499df6ccd7d3d2d36, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5266fdbd50a5dd64e9ccc9626474d0db, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 730a403a34a21a542b557ded2efcd870, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 67b6fa06590ac9c4fbfade116624f316, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7503093167a6a464fa648f965374494e, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 9406268077236dd4ebc876e17851f736, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 9e958c11fc070ad4eb8bd489880e04b1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5e5ac459ee7cce5429ee24e76f872258, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 114de79ac0d2f404ba6c04cdef427ed0, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: f1e94bb0c335aaf448070a84fa4cb7c0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6c22668b85f6c8a46ba743bdfbcaab44, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d8751dbf98fe6f845b41a0280b765341, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1e8e76632663ed24796f103d148c2165, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1704a001c5dcff741aa27949717be351, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b882e45da6f7285488589e056d428cb3, type: 2}
