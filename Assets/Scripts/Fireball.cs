@@ -6,6 +6,7 @@ public class Fireball : MonoBehaviour
 {
     public float shootingDamage = 10;
     public float speed = 20f;
+    public float flyingTime = 1f;
     public Rigidbody2D rb2d;
     public GameObject impactEffect;
 
@@ -13,6 +14,7 @@ public class Fireball : MonoBehaviour
     void Start()
     {
         rb2d.velocity = transform.right * speed;
+        Destroy(gameObject, flyingTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)

@@ -69,26 +69,18 @@ public class PlayerMovement : MonoBehaviour
         // Crouching
         if (isGrounded)
         {
-            if (!crouching)
-            {
-                if (Input.GetButtonDown(crouchInputName) && Mathf.Abs(rb.velocity.x) > dashForceTrigger)
-                {
-                    crouching = true;
-                    circleC2d.enabled = false;
 
-                }
+            if (Input.GetButton(crouchInputName) && movementInputValue == 0)
+            {
+                crouching = true;
+                circleC2d.enabled = false;
             }
-
-            if (crouching)
+            else
             {
-                if(Input.GetButtonUp(crouchInputName))
-                {
-                    crouching = false;
-                    circleC2d.enabled = true;
-                }
+                crouching = false;
+                circleC2d.enabled = true;
             }
         }
-
 
         move.x = movementInputValue;
         speed = move.x * maxSpeed;

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingDamage: 10
   speed: 10
+  flyingTime: 1
   rb2d: {fileID: 314877758306240475}
   impactEffect: {fileID: 1971748912679581762, guid: 57ef82b8f8844a04289f9dad27c4263a,
     type: 3}
