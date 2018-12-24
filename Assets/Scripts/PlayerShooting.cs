@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public int playerNumber = 1;
     public Transform firePoint;
     public GameObject fireballPrefab;
 
+    private string playerShootName;
     private Animator animator;
 
     private void Awake()
@@ -14,9 +16,14 @@ public class PlayerShooting : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        playerShootName = "Fire" + playerNumber;
+    }
+
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown(playerShootName))
         {
             Shoot();    
         }
