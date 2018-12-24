@@ -12,10 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     private string xMovementAxisName;
-
     private float movementInputValue;
     private float speed;
-
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rb;
@@ -34,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
     private bool crouching = false;
     private CircleCollider2D circleC2d;
     public float crouchSpeedModifier = 0.5f;
+
+    // Dashing
+    public float dashForceTrigger = 5;
+    public float dashForce = 5f;
+
 
     // Use this for initialization
     void Awake()
@@ -60,22 +63,35 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        // Crouching
-        if (Input.GetButton(crouchInputName) && isGrounded)
-        {
-            crouching = true;
-            circleC2d.enabled = false;
-        }
-        else
-        {
-            crouching = false;
-            circleC2d.enabled = true;
-        }
-
         // Moving along the x-Axis
         move = Vector2.zero;
+
+        // Crouching
+        if (isGrounded)
+        {
+            if (!crouching)
+            {
+                if (Input.GetButtonDown(crouchInputName) && Mathf.Abs(rb.velocity.x) > dashForceTrigger)
+                {
+                    crouching = true;
+                    circleC2d.enabled = false;
+
+                }
+            }
+
+            if (crouching)
+            {
+                if(Input.GetButtonUp(crouchInputName))
+                {
+                    crouching = false;
+                    circleC2d.enabled = true;
+                }
+            }
+        }
+
+
         move.x = movementInputValue;
-        speed = crouching ? move.x * maxSpeed * crouchSpeedModifier : move.x * maxSpeed;
+        speed = move.x * maxSpeed;
         rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
@@ -108,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
     private void Flip()
     {
         facingRight = !facingRight;
-
         transform.Rotate(0f, 180f, 0f);
     }
 }

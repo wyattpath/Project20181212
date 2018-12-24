@@ -10581,6 +10581,11 @@ PrefabInstance:
       propertyPath: crouchSpeedModifier
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114361869909888564, guid: 29eaab0101f98a34c9c61d12dee16797,
+        type: 3}
+      propertyPath: dashForceTrigger
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1296772891141888, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}
       propertyPath: shootCooldown
       value: 1
