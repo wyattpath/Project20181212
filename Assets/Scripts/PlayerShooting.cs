@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public int playerNumber = 1;
-    public float shootCooldown = 0.5f;
-    public float shootTriggerTimer = 0.1f;
+    public float shootCooldown = 1.0f;
+    public float shootTriggerTimer = 0.6f;
     public Transform firePoint;
     public GameObject fireballPrefab;
 
-    private float shootTimer;
+    private float shootTimer = -1.0f;
     private string playerShootName;
     private Animator animator;
     private bool shooting = false;
@@ -27,19 +27,19 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown(playerShootName) && !shooting)
+        if (Input.GetButtonDown(playerShootName) && !shooting && shootTimer <= 0)
         {
             shooting = true;
             shootTimer = shootCooldown;
             animator.SetTrigger("shoot");
         }
 
-        if (shooting)
+        if (shootTimer > 0)
         {
-            if (shootTimer > 0)
-            {
-                shootTimer -= Time.deltaTime;
+            shootTimer -= Time.deltaTime;
 
+            if (shooting)
+            {
                 if (shootTimer < shootTriggerTimer)
                 {
                     Shoot();
