@@ -10576,6 +10576,19 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.35
       objectReference: {fileID: 0}
+    - target: {fileID: 114361869909888564, guid: 29eaab0101f98a34c9c61d12dee16797,
+        type: 3}
+      propertyPath: crouchSpeedModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296772891141888, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}
+      propertyPath: shootCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296772891141888, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}
+      propertyPath: shootTriggerTimer
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}
 --- !u!1001 &6255924607281716350
@@ -10671,8 +10684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
-  shootCooldown: 0.3
-  shootTriggerTimer: 0.1
+  shootCooldown: 1
+  shootTriggerTimer: 0.6
   firePoint: {fileID: 82873557}
   fireballPrefab: {fileID: 2055633716029524124, guid: b83be71b2f4806e45b5e55050c920bcc,
     type: 3}
