@@ -91,8 +91,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(move.x * dashForce, rb.velocity.y);
         }
-
-
     }
 
     // Update is called once per frame
