@@ -7,25 +7,23 @@ public class PlayerMovement : MonoBehaviour
 
     // playerInput
     public int playerNumber = 1;
-    public float jumpForce = 15;
     public float maxSpeed = 7;
 
 
     private string xMovementAxisName;
     private float movementInputValue;
-    private float speed;
-    private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rb;
     private Vector2 move;
     private bool facingRight = true;
 
     // Jumping variables
-    private string jumpAxisName;
-    private bool isGrounded;
+    public float jumpForce = 15;
     public Transform groundCheck;
     public float checkRadius = 0.25f;
     public LayerMask whatIsGround;
+    private string jumpAxisName;
+    private bool isGrounded;
 
     // Crouching
     private string crouchInputName;
@@ -34,14 +32,16 @@ public class PlayerMovement : MonoBehaviour
     public float crouchSpeedModifier = 0.5f;
 
     // Dashing
-    public float dashForceTrigger = 5;
-    public float dashForce = 5f;
+    private string dashInputName;
+    public float dashForce = 12;
+    public float dashCooldown = .5f;
+    private float dashTimer;
+    private bool dashing;
 
 
     // Use this for initialization
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         circleC2d = GetComponent<CircleCollider2D>();
@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         jumpAxisName = "Jump" + playerNumber;
         xMovementAxisName = "Horizontal" + playerNumber;
         crouchInputName = "Crouch" + playerNumber;
+        dashInputName = "Dash" + playerNumber;
     }
 
     void FixedUpdate()
@@ -63,13 +64,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        // Moving along the x-Axis
-        move = Vector2.zero;
-
-        // Crouching
         if (isGrounded)
         {
 
+            // Crouching
             if (Input.GetButton(crouchInputName) && movementInputValue == 0)
             {
                 crouching = true;
@@ -82,9 +80,19 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Moving along the x-Axis
+        move = Vector2.zero;
         move.x = movementInputValue;
-        speed = move.x * maxSpeed;
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+        if (!dashing)
+        {
+            rb.velocity = new Vector2(move.x * maxSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(move.x * dashForce, rb.velocity.y);
+        }
+
+
     }
 
     // Update is called once per frame
@@ -111,6 +119,36 @@ public class PlayerMovement : MonoBehaviour
 
         // Animates crouching
         animator.SetBool("crouching", crouching);
+
+
+        animator.SetBool("dashing", dashing);
+
+        // dashing
+        if (Input.GetButtonDown(dashInputName) && !dashing)
+        {
+            animator.SetTrigger("dash");
+            dashing = true;
+            dashTimer = dashCooldown;
+        }
+
+        if (dashing)
+        {
+
+            if (!isGrounded || rb.velocity.x == 0)
+            {
+                dashing = false;
+            }
+            if (dashTimer > 0)
+            {
+                dashTimer -= Time.deltaTime;
+            }
+            else
+            {
+                dashing = false;
+            }
+        }
+
+
     }
 
     private void Flip()

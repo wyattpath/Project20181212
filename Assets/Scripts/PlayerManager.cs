@@ -1,10 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-[Serializable]
 public class PlayerManager : MonoBehaviour
 {
-    public Color playerColor;
     public Transform spawnPoint;
     [HideInInspector] public int playerNumber;
     [HideInInspector] public GameObject instance;
