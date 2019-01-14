@@ -30,7 +30,7 @@ public class PlayerShooting : MonoBehaviour
         playerMana = GetComponent<PlayerMana>();
 
         // animation speed
-        animator.speed /= shootCooldown;
+        animator.SetFloat("shootAnimationSpeed", 1/shootCooldown);
         shootTriggerTimer *= shootCooldown;
     }
 

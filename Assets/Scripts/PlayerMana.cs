@@ -7,8 +7,8 @@ public class PlayerMana : MonoBehaviour
 {
     public float startingMana = 100f;
     public float currentMana = 0f;
-    public float manaRegenerationPoints = 20f;
-    public float manaRegenerationCooldown = 1f;
+    public float manaRegenerationPoints = 1f;
+    public float manaRegenerationCooldown = .05f;
     public Slider manaSlider;
 
     private float manaTimer;

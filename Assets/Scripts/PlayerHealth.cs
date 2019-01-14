@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float startingHealth = 100f;
     public float currentHealth = 0f;
-    public float hurtCooldown = 0.3f;
+    public float hurtCooldown = .3f;
     public Slider healthSlider;
     [HideInInspector] public bool hurting;
 

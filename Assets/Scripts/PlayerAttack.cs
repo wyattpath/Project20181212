@@ -6,9 +6,9 @@ public class PlayerAttack : MonoBehaviour
 {
     public int playerNumber = 1;
     public Collider2D attackTrigger;
-    public float attackCooldown = 0.3f;
-    public float attackTriggerTimer = 0.1f;
+    public float attackCooldown = 0.67f;
 
+    private float attackTriggerTimer = 0.1f;
     private string playerAttackName;
     private bool attacking = false;
     private float attackTimer = 0;
@@ -18,10 +18,8 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        attackTrigger.enabled = false;
-
         playerHealth = GetComponent<PlayerHealth>();
-
+        attackTrigger.enabled = false;
     }
 
     private void Start()

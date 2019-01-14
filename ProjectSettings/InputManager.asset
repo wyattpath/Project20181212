@@ -41,7 +41,7 @@ InputManager:
     m_Name: Vertical1
     descriptiveName: Verticall keyboard axis for player 1
     descriptiveNegativeName: 
-    negativeButton: s
+    negativeButton: 
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
@@ -57,8 +57,8 @@ InputManager:
     m_Name: Vertical2
     descriptiveName: Verticall keyboard axis for player 2
     descriptiveNegativeName: 
-    negativeButton: down
-    positiveButton: up
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -73,8 +73,8 @@ InputManager:
     m_Name: Crouch1
     descriptiveName: Crouch for Player 1
     descriptiveNegativeName: 
-    negativeButton: s
-    positiveButton: 
+    negativeButton: 
+    positiveButton: s
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -89,8 +89,8 @@ InputManager:
     m_Name: Crouch2
     descriptiveName: Crouch For Player 2
     descriptiveNegativeName: 
-    negativeButton: down
-    positiveButton: 
+    negativeButton: 
+    positiveButton: down
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
