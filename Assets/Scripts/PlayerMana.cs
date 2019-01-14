@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMana : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMana : MonoBehaviour
     public float currentMana = 0f;
     public float manaRegenerationPoints = 20f;
     public float manaRegenerationCooldown = 1f;
+    public Slider manaSlider;
 
     private float manaTimer;
 
@@ -28,6 +30,8 @@ public class PlayerMana : MonoBehaviour
             else
             {
                 currentMana += manaRegenerationPoints;
+                manaSlider.value = currentMana;
+                manaTimer = manaRegenerationCooldown;
             }
         }
         else
@@ -40,6 +44,7 @@ public class PlayerMana : MonoBehaviour
     {
         manaTimer = manaRegenerationCooldown;
         currentMana -= amount;
+        manaSlider.value = currentMana;
     }
 
     public bool canShoot(int amount)
