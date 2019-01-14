@@ -10305,7 +10305,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 97.6
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11091,6 +11091,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 584418431328774785, guid: 29eaab0101f98a34c9c61d12dee16797,
+        type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1010487944}
     - target: {fileID: 1296772891141888, guid: 29eaab0101f98a34c9c61d12dee16797, type: 3}
       propertyPath: shootCooldown
       value: 0.5

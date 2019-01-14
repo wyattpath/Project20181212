@@ -58,7 +58,7 @@ InputManager:
     descriptiveName: Verticall keyboard axis for player 2
     descriptiveNegativeName: 
     negativeButton: down
-    positiveButton: 
+    positiveButton: up
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -106,7 +106,7 @@ InputManager:
     descriptiveName: Shooting for Player 1
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: i
+    positiveButton: t
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -122,7 +122,7 @@ InputManager:
     descriptiveName: Shooting for Player 2
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: '[5]'
+    positiveButton: i
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -138,7 +138,7 @@ InputManager:
     descriptiveName: Attack for Player 1
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: j
+    positiveButton: f
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -154,7 +154,7 @@ InputManager:
     descriptiveName: Attack for Player 2
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: '[1]'
+    positiveButton: l
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000

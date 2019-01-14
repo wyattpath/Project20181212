@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float startingHealth = 100f;
     public float currentHealth = 0f;
     public float hurtCooldown = 0.3f;
+    public Slider healthSlider;
     [HideInInspector] public bool hurting;
 
     private Animator animator;
@@ -37,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
             hurtTimer = hurtCooldown;
             animator.SetTrigger("hurt");
             currentHealth -= amount;
+            healthSlider.value = currentHealth;
         }
 
         if (currentHealth <= 0f && !dead)
