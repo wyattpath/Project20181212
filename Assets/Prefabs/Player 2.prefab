@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 6255924606821560617}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3784048836472263523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2262382556693060681}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2262382556693060681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784048836472263523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.71, y: -0.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6255924606821560617}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6255924606531295419
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +153,9 @@ GameObject:
   - component: {fileID: 6255924606821560622}
   - component: {fileID: 6255924607281716360}
   - component: {fileID: 6255924607281716352}
+  - component: {fileID: 4576803672023556197}
+  - component: {fileID: 8641213536569995789}
+  - component: {fileID: 6255924607281716353}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -144,6 +177,7 @@ Transform:
   - {fileID: 6255924607430585166}
   - {fileID: 6255924606531295414}
   - {fileID: 82873557}
+  - {fileID: 2262382556693060681}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -337,9 +371,61 @@ MonoBehaviour:
   playerNumber: 2
   shootCooldown: 1
   shootTriggerTimer: 0.6
+  firePoint: {fileID: 2262382556693060681}
+  fireballPrefab: {fileID: 2055633716029524124, guid: b83be71b2f4806e45b5e55050c920bcc,
+    type: 3}
+  manaCost: 20
+--- !u!58 &4576803672023556197
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255924606821560625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06, y: -0.35}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!114 &8641213536569995789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255924606821560625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564cccef717bae74aa1e6657db10889d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: 2
+  shootCooldown: 1
+  shootTriggerTimer: 0.6
   firePoint: {fileID: 82873557}
   fireballPrefab: {fileID: 2055633716029524124, guid: b83be71b2f4806e45b5e55050c920bcc,
     type: 3}
+  manaCost: 20
+--- !u!114 &6255924607281716353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255924606821560625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac9f0e83ad94564887ec958f0cef827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingMana: 100
+  currentMana: 0
+  manaRegenerationPoints: 20
+  manaRegenerationCooldown: 1
 --- !u!1 &6255924607430585169
 GameObject:
   m_ObjectHideFlags: 0

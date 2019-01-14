@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 5376351447974083621}
   - component: {fileID: 584418431328774785}
   - component: {fileID: 1296772891141888}
+  - component: {fileID: 303595888}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -260,11 +261,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  shootCooldown: 1
-  shootTriggerTimer: 0.6
+  shootCooldown: 0.1
+  shootTriggerTimer: 0.05
   firePoint: {fileID: 99232867}
   fireballPrefab: {fileID: 2055633716029524124, guid: b83be71b2f4806e45b5e55050c920bcc,
     type: 3}
+  manaCost: 20
+--- !u!114 &303595888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296772891141886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac9f0e83ad94564887ec958f0cef827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingMana: 100
+  currentMana: 0
+  manaRegenerationPoints: 20
+  manaRegenerationCooldown: 1
 --- !u!1 &1532445985312860
 GameObject:
   m_ObjectHideFlags: 0
