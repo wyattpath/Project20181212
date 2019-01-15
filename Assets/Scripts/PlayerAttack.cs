@@ -7,6 +7,9 @@ public class PlayerAttack : MonoBehaviour
     public int playerNumber = 1;
     public Collider2D attackTrigger;
     public float attackCooldown = 0.67f;
+    // Audio
+    public AudioSource attackAudio;
+    public AudioClip attackClip;
 
     private float attackTriggerTimer = 0.1f;
     private string playerAttackName;
@@ -27,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
         playerAttackName = "Attack" + playerNumber;
     }
 
-    void Update()
+    private void Update()
     {
 
         if (Input.GetButtonDown(playerAttackName) && !attacking && !playerHealth.hurting)
@@ -35,6 +38,9 @@ public class PlayerAttack : MonoBehaviour
             attacking = true;
             animator.SetTrigger("attack");
             attackTimer = attackCooldown;
+
+            attackAudio.clip = attackClip;
+            attackAudio.Play();
         }
 
         if (attacking)
