@@ -10,14 +10,14 @@ public class PlayerShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject fireballPrefab;
     public int manaCost = 20;
+    public AudioSource shootingAudio;
+    public AudioClip shootingClip;
 
     private float shootTimer = -1.0f;
     private string playerShootName;
     private Animator animator;
     private bool shooting = false;
     private PlayerMana playerMana;
-
-    // Mana
 
     private void Awake()
     {
@@ -44,6 +44,8 @@ public class PlayerShooting : MonoBehaviour
                 shooting = true;
                 shootTimer = shootCooldown;
                 animator.SetTrigger("shoot");
+                shootingAudio.clip = shootingClip;
+                shootingAudio.Play();
             }
         }
         if (shootTimer > 0)
