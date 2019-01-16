@@ -9,27 +9,46 @@ public class Fireball : MonoBehaviour
     public float flyingTime = 1f;
     public Rigidbody2D rb2d;
     public GameObject impactEffect;
+    [HideInInspector] public int playerNumber;
+    [HideInInspector] public GameObject instance;
 
-    // Start is called before the first frame update
-    void Start()
+    private int targetNumber = 0;
+    private float impactEffectDuration = .5f;
+
+    void Awake()
     {
         rb2d.velocity = transform.right * speed;
         Destroy(gameObject, flyingTime);
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.isTrigger && (other.CompareTag("Player") || other.CompareTag("Platforms")));
+        PlayerShooting targetShooting = other.GetComponent<PlayerShooting>();
+        if (targetShooting != null)
         {
-            PlayerHealth targetHealth = other.GetComponent<PlayerHealth>();
-            if (targetHealth != null)
-            {
-                targetHealth.TakeDamage(shootingDamage);
-            }
-
-            impactEffect = Instantiate(impactEffect, transform.position, transform.rotation);
-            Destroy(impactEffect, .5f);
-            Destroy(gameObject);
+            targetNumber = other.GetComponent<PlayerShooting>().playerNumber;
         }
+
+        if (targetNumber != playerNumber || targetNumber == 0)
+        {
+            if (!other.isTrigger && (other.CompareTag("Player") || other.CompareTag("Platforms")))
+            {
+                PlayerHealth targetHealth = other.GetComponent<PlayerHealth>();
+                if (targetHealth != null)
+                {
+                    targetHealth.TakeDamage(shootingDamage);
+                }
+                Destroy(gameObject);
+            }
+            targetNumber = 0;
+        }
+    }
+
+    void OnDestroy()
+    {
+        impactEffect = Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(impactEffect, impactEffectDuration);
     }
 }

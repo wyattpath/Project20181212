@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour
     private PlayerManager[] players;
     Cinemachine.CinemachineTargetGroup.Target[] targets;
 
-
-
     private void Awake()
     {
         SpawnAllPlayers();
@@ -21,10 +19,8 @@ public class GameManager : MonoBehaviour
 
     private void SpawnAllPlayers()
     {
-        players = new PlayerManager[spawnpoints.Length];
         for (int i = 0; i < players.Length; i++)
         {
-            players[i] = gameObject.AddComponent<PlayerManager>();
             players[i].spawnPoint = spawnpoints[i];
             players[i].instance = Instantiate(playerPrefab, players[i].spawnPoint.position, players[i].spawnPoint.rotation) as GameObject;
             players[i].playerNumber = i + 1;

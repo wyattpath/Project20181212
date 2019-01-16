@@ -10,10 +10,8 @@ public class PlayerShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject fireballPrefab;
     public int manaCost = 20;
-    public AudioSource shootingAudio;
-    public AudioClip shootingClip;
 
-    private float shootTimer = -1.0f;
+    private float shootTimer = 1.0f;
     private string playerShootName;
     private Animator animator;
     private bool shooting = false;
@@ -26,8 +24,8 @@ public class PlayerShooting : MonoBehaviour
 
     private void Start()
     {
-        playerShootName = "Fire" + playerNumber;
         playerMana = GetComponent<PlayerMana>();
+        playerShootName = "Fire" + playerNumber;
 
         // animation speed
         animator.SetFloat("shootAnimationSpeed", 1/shootCooldown);
@@ -44,8 +42,6 @@ public class PlayerShooting : MonoBehaviour
                 shooting = true;
                 shootTimer = shootCooldown;
                 animator.SetTrigger("shoot");
-                shootingAudio.clip = shootingClip;
-                shootingAudio.Play();
             }
         }
         if (shootTimer > 0)
